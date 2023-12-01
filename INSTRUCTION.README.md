@@ -35,7 +35,7 @@ Each **Medication** has:
 Develop a service via REST API that allows clients to communicate with the drones (i.e. **dispatch controller**). The specific communicaiton with the drone is outside the scope of this task. 
 
 The service should allow:
-- registering a drone;
+- registering a drone; [Done]
 - loading a drone with medication items;
 - checking loaded medication items for a given drone; 
 - checking available drones for loading;
