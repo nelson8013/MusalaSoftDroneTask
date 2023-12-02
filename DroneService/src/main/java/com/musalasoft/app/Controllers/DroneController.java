@@ -23,19 +23,19 @@ public class DroneController {
 
     private final DroneService droneService;
 
-//    public DroneController(DroneService droneService) {
-//        this.droneService = droneService;
-//    }
-
 
     @GetMapping("drone/{droneId}")
-    public Drone getDrone(@PathVariable("droneId") Long droneId) {
-        return droneService.getDrone(droneId);
+    public ResponseEntity<Drone> getDrone(@PathVariable(name = "droneId") Long droneId) {
+        Drone drone = droneService.getDrone(droneId);
+
+        return new ResponseEntity<>(drone, HttpStatus.OK);
     }
 
     @GetMapping("drones")
-    public List<Drone> drones() {
-        return droneService.allDrones();
+    public ResponseEntity<List<Drone>> drones() {
+        List<Drone> drones = droneService.allDrones();
+
+        return new ResponseEntity<>(drones, HttpStatus.OK);
     }
 
 
@@ -48,9 +48,37 @@ public class DroneController {
     }
 
     @PostMapping("/load-medication/{droneId}")
-    public ResponseEntity<Drone> loadMedication(@PathVariable Long droneId, @RequestBody Medication medication){
+    public ResponseEntity<Drone> loadMedication(@PathVariable(name = "droneId") Long droneId, @RequestBody Medication medication){
         droneService.loadMedication(droneId, medication);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+
+    @PostMapping("/load-medications/{droneId}")
+    public ResponseEntity<Drone> loadMultipleMedications(@PathVariable(name = "droneId") Long droneId, @RequestBody List<Medication> medications) {
+        droneService.loadMultipleMedications(droneId, medications);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+
+    @GetMapping("/get-available-drones-for-loading")
+    public ResponseEntity<List<Drone>> getAvailableDronesForLoading(){
+        List<Drone> availableDrones = droneService.getAvailableDronesForLoading();
+
+        return new ResponseEntity<>(availableDrones, HttpStatus.OK);
+    }
+
+
+    @GetMapping("/get-battery-level/{droneId}")
+    public ResponseEntity<Integer> getBatteryLevel(@PathVariable(name = "droneId") Long droneId){
+        int batteryLevel = droneService.getBatteryLevel(droneId);
+        return new ResponseEntity<>(batteryLevel, HttpStatus.OK);
+    }
+
+    @GetMapping("/get-loaded-medication-from-drone/{droneId}")
+    public ResponseEntity<List<Medication>> getLoadedMedicationFromDrone(@PathVariable(name = "droneId") Long droneId){
+        List<Medication>  medications =  droneService.getLoadedMedications(droneId);
+        return new ResponseEntity<>(medications, HttpStatus.OK);
+    }
+
 
 }

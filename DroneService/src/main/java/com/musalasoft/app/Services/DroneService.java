@@ -18,6 +18,7 @@
     import org.slf4j.Logger;
     import org.slf4j.LoggerFactory;
 
+    import java.util.ArrayList;
     import java.util.Arrays;
     import java.util.List;
 
@@ -104,6 +105,20 @@
             droneRepository.save(drone);
         }
 
+        public void loadMultipleMedications(Long droneId, List<Medication> medications) {
+            Drone drone = getDrone(droneId);
+
+            for (Medication medication : medications) {
+                validateDroneLoadStateAndBatteryCapacity(drone, medication);
+                drone.getLoadedMedications().add(medication);
+            }
+
+            drone.setState(DroneState.LOADING);
+            drone.setState(DroneState.LOADED);
+            droneRepository.save(drone);
+        }
+
+
         @Override
         public List<Medication> getLoadedMedication(Long droneId) {
             Drone drone = getDrone(droneId);
@@ -122,13 +137,8 @@
 
             double totalWeight = calculateTotalWeightLoaded(drone);
 
-            System.out.println("Total Weight Loaded: " + totalWeight);
-            System.out.println("Medication Weight: "   + medication.getWeight());
-            System.out.println("Drone Weight Limit: "  + drone.getWeightLimit());
-
-
             if (totalWeight + medication.getWeight() > drone.getWeightLimit()) {
-                throw new WeightLimitExceededException("Loading medication exceeds weight limit");
+                throw new WeightLimitExceededException("Loaded medication exceeds weight limit of " + drone.getWeightLimit() + " Grams");
             }
         }
 
@@ -147,5 +157,16 @@
         public void droneBatteryLevelLog(Long id, String message){
             LOGGER.info("Event for Drone ID {}: {}", id, message);
         }
+
+        @Override
+        public Integer getBatteryLevel(Long droneId) {
+            return droneRepository.findDroneBatteryCapacityById(droneId);
+        }
+
+        public List<Medication> getLoadedMedications(Long droneId) {
+            Drone drone = getDrone(droneId);
+            return new ArrayList<>(drone.getLoadedMedications());
+        }
+
 
     }

@@ -35,11 +35,11 @@ Each **Medication** has:
 Develop a service via REST API that allows clients to communicate with the drones (i.e. **dispatch controller**). The specific communicaiton with the drone is outside the scope of this task. 
 
 The service should allow:
-- registering a drone; [Done]
-- loading a drone with medication items;
+- registering a drone; :scroll: **Done**
+- loading a drone with medication items; :scroll: **Done**
 - checking loaded medication items for a given drone; 
-- checking available drones for loading;
-- check drone battery level for a given drone;
+- checking available drones for loading; :scroll: **Done**
+- check drone battery level for a given drone; :scroll: **Done**
 
 > Feel free to make assumptions for the design approach. 
 
@@ -52,19 +52,19 @@ While implementing your solution **please take care of the following requirement
 #### Functional requirements
 
 - There is no need for UI;
-- Prevent the drone from being loaded with more weight that it can carry;
-- Prevent the drone from being in LOADING state if the battery level is **below 25%**;
-- Introduce a periodic task to check drones battery levels and create history/audit event log for this.
+- Prevent the drone from being loaded with more weight that it can carry; :scroll: **Done**
+- Prevent the drone from being in LOADING state if the battery level is **below 25%**; :scroll: **Done**
+- Introduce a periodic task to check drones battery levels and create history/audit event log for this. :scroll: **Done**
 
 ---
 
 #### Non-functional requirements
 
-- Input/output data must be in JSON format;
+- Input/output data must be in JSON format; :scroll: **Done**
 - Your project must be buildable and runnable;
 - Your project must have a README file with build/run/test instructions (use DB that can be run locally, e.g. in-memory, via container);
 - Any data required by the application to run (e.g. reference tables, dummy data) must be preloaded in the database.
-- JUnit tests are mandatory;
+- JUnit tests are mandatory;  :scroll: **Done**
 - Advice: Show us how you work through your commit history.
 
 ---

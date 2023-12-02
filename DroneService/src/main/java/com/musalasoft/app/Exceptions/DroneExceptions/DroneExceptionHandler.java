@@ -17,6 +17,6 @@ public class DroneExceptionHandler {
     @ExceptionHandler( value = {DroneStateException.class})
     public ResponseEntity<Object> handleDroneStateException( DroneStateException droneStateException){
         DroneException exception = new DroneException(droneStateException.getMessage(), droneStateException.getCause(), HttpStatus.NOT_FOUND);
-        return new ResponseEntity<>(exception, HttpStatus.NOT_ACCEPTABLE);
+        return new ResponseEntity<>(exception, HttpStatus.NOT_FOUND);
     }
 }

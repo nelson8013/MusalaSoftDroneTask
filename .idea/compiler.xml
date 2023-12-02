@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="DroneService" target="17" />
+      <module name="DroneService" target="18" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
