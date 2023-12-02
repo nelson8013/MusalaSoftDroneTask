@@ -8,13 +8,15 @@ import java.util.List;
 public interface DroneServiceInterface {
 
     Drone getDrone(Long droneId);
+
+    List<Drone> allDrones();
     Drone registerDrone(Drone drone);
 
     public List<Drone> getAvailableDronesForLoading();
     void loadMedication(Long droneId, Medication medication);
     List<Medication> getLoadedMedication(Long droneId);
 
-    void validateDroneLoadStateAndBatteryCapacityMedication(Drone drone, Medication medication);
+    void validateDroneLoadStateAndBatteryCapacity(Drone drone, Medication medication);
 
     double calculateTotalWeightLoaded(Drone drone);
 
@@ -22,7 +24,7 @@ public interface DroneServiceInterface {
 
     void checkAllDronesBatteryLevelsAndLog();
 
-    void droneBatteryLevelLog(Drone drone, String message);
+    void droneBatteryLevelLog(Long id, String message);
 
 
 }

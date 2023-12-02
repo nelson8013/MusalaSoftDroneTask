@@ -1,17 +1,14 @@
 package com.musalasoft.app.Models;
 
+import com.musalasoft.app.Dtos.Requests.MedicationRequest;
 import com.musalasoft.app.Exceptions.MedicationExceptions.CodeCaseInvalidException;
 import com.musalasoft.app.Exceptions.MedicationExceptions.NameCaseInvalidException;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 import static com.musalasoft.app.Utils.RequirementValidation.isCodeValid;
 import static com.musalasoft.app.Utils.RequirementValidation.isNameValid;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "medication")
 public class Medication {
     @Id
@@ -20,9 +17,27 @@ public class Medication {
 
     private String name;
 
-    private Double weight;
     private String code;
+    private Double weight;
     private String image;
+
+
+    public Medication(){}
+
+    public Medication(String name, String code, Double weight,  String image){
+        this.name   = name;
+        this.code   = code;
+        this.weight = weight;
+        this.image  = image;
+    }
+
+    public Medication(MedicationRequest request) {
+        this.name   = request.getName();
+        this.code   = request.getCode();
+        this.weight = request.getWeight();
+        this.image  = request.getImage();
+    }
+
 
     public void setId(Long id){
         this.id = id;
@@ -37,6 +52,10 @@ public class Medication {
             throw new NameCaseInvalidException("Only letters, numbers, hyphens ('-'), and underscores ('_') are allowed");
         }
         this.name = name;
+    }
+
+    public String getName(){
+        return this.name;
     }
 
 

@@ -25,10 +25,38 @@ public class Drone {
     private String model;
     private double weightLimit;
     private int batteryCapacity;
+
+    @Enumerated(EnumType.STRING)
     private DroneState state;
 
     @OneToMany( cascade = CascadeType.ALL)
     private List<Medication> loadedMedications = new ArrayList<>();
+
+
+
+
+    public Drone(){}
+
+    public Drone(String serialNumber, String model, double weightLimit, int batteryCapacity, DroneState state) {
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.weightLimit = weightLimit;
+        this.batteryCapacity = batteryCapacity;
+        this.state = state;
+    }
+
+    public Drone(DroneRequest request){
+        this.serialNumber    = request.getSerialNumber();
+        this.model           = request.getModel();
+        this.weightLimit     = request.getWeightLimit();
+        this.batteryCapacity = request.getBatteryCapacity();
+        this.state           = request.getState();
+    }
+
+
+
+
+
 
 
     public void setId(Long id) {
@@ -39,16 +67,6 @@ public class Drone {
      return this.id;
     }
 
-
-
-    public Drone(){}
-    public Drone(DroneRequest request){
-        this.serialNumber    = request.getSerialNumber();
-        this.model           = request.getModel();
-        this.weightLimit     = request.getWeightLimit();
-        this.batteryCapacity = request.getBatteryCapacity();
-        this.state           = request.getState();
-    }
 
     public void setSerialNumber(String serialNumber) {
      if (!isSerialNumberValid(serialNumber)) {
@@ -61,32 +79,31 @@ public class Drone {
     }
 
 
-
-   public void setModel(String model) {
+    public void setModel(String model) {
 
     if (!isModelValid(model)) {
      throw new IllegalArgumentException("Invalid drone model");
     }
     this.model = model;
    }
-   public String getModel() {
+    public String getModel() {
     return this.model;
    }
 
 
 
-   public void setWeightLimit(double weightLimit) {
+    public void setWeightLimit(double weightLimit) {
     if (!isWeightLimitValid(weightLimit)) {
      throw new WeightLimitExceededException("Weight limit must be between 0 and 500 grams.");
     }
     this.weightLimit = weightLimit;
    }
-   public double getWeightLimit() {
+    public double getWeightLimit() {
     return this.weightLimit;
    }
 
 
-   public void setBatteryCapacity(int batteryCapacity) {
+    public void setBatteryCapacity(int batteryCapacity) {
 
     if (batteryCapacity >= 0 && batteryCapacity <= 100) {
      this.batteryCapacity = batteryCapacity;
@@ -95,21 +112,21 @@ public class Drone {
     }
 
    }
-   public int getBatteryCapacity() {
+    public int getBatteryCapacity() {
     return this.batteryCapacity;
    }
 
 
 
-   public void setState(DroneState state) {
+    public void setState(DroneState state) {
     this.state = state;
    }
-   public DroneState getState() {
+    public DroneState getState() {
     return this.state;
    }
 
 
-   public List<Medication> getLoadedMedications() {
+    public List<Medication> getLoadedMedications() {
     return this.loadedMedications;
    }
 
