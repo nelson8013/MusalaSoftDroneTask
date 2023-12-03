@@ -38,4 +38,9 @@ public class RequirementValidation {
         return true;
     }
 
+    public static boolean isDroneSerialNumberCharsLessThanOneHundred(String serialNumber) {
+        return serialNumber.length() < 100;
+    }
+
+
 }

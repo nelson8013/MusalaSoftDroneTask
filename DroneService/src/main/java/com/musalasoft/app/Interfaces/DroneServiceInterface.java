@@ -24,8 +24,6 @@ public interface DroneServiceInterface {
 
     void validateDroneLoadStateAndBatteryCapacity(Drone drone, Medication medication);
 
-    double calculateTotalWeightLoaded(Drone drone);
-
     int checkBatteryLevel(Long droneId);
 
     void checkAllDronesBatteryLevelsAndLog();

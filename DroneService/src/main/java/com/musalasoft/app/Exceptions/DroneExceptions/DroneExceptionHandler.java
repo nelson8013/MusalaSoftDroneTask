@@ -11,12 +11,12 @@ public class DroneExceptionHandler {
     @ExceptionHandler( value = {DroneNotFoundException.class})
     public ResponseEntity<Object> handleDroneNotFoundException(DroneNotFoundException droneNotFoundException){
         DroneException exception = new DroneException(droneNotFoundException.getMessage(), droneNotFoundException.getCause(), HttpStatus.NOT_FOUND);
-        return new ResponseEntity<>(exception, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<Object>(exception, HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler( value = {DroneStateException.class})
     public ResponseEntity<Object> handleDroneStateException( DroneStateException droneStateException){
         DroneException exception = new DroneException(droneStateException.getMessage(), droneStateException.getCause(), HttpStatus.NOT_FOUND);
-        return new ResponseEntity<>(exception, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<Object>(exception, HttpStatus.NOT_FOUND);
     }
 }
