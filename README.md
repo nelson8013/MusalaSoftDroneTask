@@ -167,5 +167,7 @@ Retrieve a list of medications loaded into a drone.
 - Load multiple Medications on a drone
   ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/2744242b-2bf0-4d6c-9a4e-97377d9e568b)
 
+- Get available drones for loading
+  ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/23ac36c1-cdbf-4996-bae6-6d453e2e6925)
 
 
