@@ -122,6 +122,28 @@ Load multiple medications into a drone.
   - `droneId` (Long) - ID of the drone.
 - **Request Body:**
   - List of `Medication` - Details of the medications.
+    `
+            [
+                {
+                   "name" : "Quinine",
+                   "code" : "SPT68991",
+                   "weight" : 12.0,
+                   "image" : "https://QuinineImgae.com"
+                },
+                 {
+                   "name" : "Chloroquine",
+                   "code" : "SPT68992",
+                   "weight" : 12.0,
+                   "image" : "https://ChloroquineImgae.com"
+                },
+                 {
+                   "name" : "Chamoquine",
+                   "code" : "SPT68993",
+                   "weight" : 12.0,
+                   "image" : "https://ChamoquineImgae.com"
+                }
+           ]
+`
 - **Response:**
   - Status: 204 No Content
 
@@ -173,5 +195,9 @@ Retrieve a list of medications loaded into a drone.
 
 - Load Medication
   ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/e6047f83-b13a-4253-955c-2ae7de095af1)
+
+- Load multiple Medications on a drone
+  ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/2744242b-2bf0-4d6c-9a4e-97377d9e568b)
+
 
 
