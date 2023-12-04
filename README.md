@@ -96,7 +96,8 @@ Load a single medication into a drone.
   - `droneId` (Long) - ID of the drone.
 - **Request Body:**
   - `Medication` - Details of the medication.
-    ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/b3304516-8504-4adf-8b34-080c50e58a8f)
+    
+  ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/b3304516-8504-4adf-8b34-080c50e58a8f)
 
 - **Response:**
   - Status: 204 No Content
