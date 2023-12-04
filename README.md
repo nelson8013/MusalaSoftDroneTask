@@ -82,15 +82,8 @@ Register a new drone.
 - **Endpoint:** `POST /register-drone`
 - **Request Body:**
   - `DroneRequest` - Details of the drone.
-    `
-   - {
-   -   "serialNumber" : "srn7689",
-   -   "model" : "Heavyweight",
-   -   "weightLimit" : 300.0,
-   -   "batteryCapacity" : 100,
-   -   "state" : "IDLE"
-   - }
-  `  
+    ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/2814801d-1db3-45b4-bc77-752af895c6ff)
+
 - **Response:**
   - Status: 201 Created
   - Body: Details of the registered drone.
@@ -103,14 +96,8 @@ Load a single medication into a drone.
   - `droneId` (Long) - ID of the drone.
 - **Request Body:**
   - `Medication` - Details of the medication.
-    `
-       -  {
-       -   "name" : "Septrin",
-       -   "code" : "SPT68990",
-       -   "weight" : 12.0,
-       -   "image" : "https://septrinImgae.com"
-       -  }
-    `
+    ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/b3304516-8504-4adf-8b34-080c50e58a8f)
+
 - **Response:**
   - Status: 204 No Content
 
@@ -122,28 +109,8 @@ Load multiple medications into a drone.
   - `droneId` (Long) - ID of the drone.
 - **Request Body:**
   - List of `Medication` - Details of the medications.
-    `
-       -[
-      -   {
-           -        "name" : "Quinine",
-           -        "code" : "SPT68991",
-           -        "weight" : 12.0,
-           -        "image" : "https://QuinineImgae.com"
-           -     },
-           -      {
-           -        "name" : "Chloroquine",
-           -        "code" : "SPT68992",
-           -        "weight" : 12.0,
-           -        "image" : "https://ChloroquineImgae.com"
-           -     },
-           -      {
-           -        "name" : "Chamoquine",
-           -        "code" : "SPT68993",
-           -        "weight" : 12.0,
-           -        "image" : "https://ChamoquineImgae.com"
-           -     }
-           -]
-`
+    ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/b384a381-f125-4257-948a-78d158a5b8fe)
+
 - **Response:**
   - Status: 204 No Content
 
