@@ -15,7 +15,7 @@
 1. Make sure MySQL is running.
 2. Update the database configuration in `application.properties`, especially properties related to database connection.
 3. Run the following command to start the application:
-    ```bash
+    ```bash 
     ./mvnw spring-boot:run
     ```
 
