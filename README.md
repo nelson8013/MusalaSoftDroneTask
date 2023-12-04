@@ -1,6 +1,6 @@
 # Drone Medication Delivery Service
 
-![Uploading image.png…]()
+![image](https://builtin.com/cdn-cgi/image/f=auto,quality=80,width=752,height=435/https://builtin.com/sites/www.builtin.com/files/styles/byline_image/public/2022-09/package-drone-delivery-companies.png)
 
 
 ## PREREQUISITES
