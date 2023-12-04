@@ -103,6 +103,14 @@ Load a single medication into a drone.
   - `droneId` (Long) - ID of the drone.
 - **Request Body:**
   - `Medication` - Details of the medication.
+    `
+       -  {
+       -   "name" : "Septrin",
+       -   "code" : "SPT68990",
+       -   "weight" : 12.0,
+       -   "image" : "https://septrinImgae.com"
+       -  }
+    `
 - **Response:**
   - Status: 204 No Content
 
@@ -158,6 +166,12 @@ Retrieve a list of medications loaded into a drone.
   ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/044ec4e0-044f-473d-ad6b-0ecc3eb18e10)
 
 - Get A Single Drone
-![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/db2cfe4d-ddfc-41f5-af1c-f83046900546)
+  ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/db2cfe4d-ddfc-41f5-af1c-f83046900546)
+
+- Register a Drone
+  ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/6007ea54-fabc-42bd-af8b-b64328bca46a)
+
+- Load Medication
+  ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/e6047f83-b13a-4253-955c-2ae7de095af1)
 
 
