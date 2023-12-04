@@ -5,13 +5,8 @@
 
 ## Build Instructions
 1. Clone the repository.
-2. Run the schema (drone-service.sql) script located in the project root directory:
-     ```bash
-    mysql -u <your_username> -p <your_password> < drone-service.sql
-    ```
-   Replace `<your_username>` and `<your_password>` with your MySQL username
-3. Navigate to the project directory.
-4. Run the following command to build the project:
+2. Navigate to the project directory.
+3. Run the following command to build the project:
     ```bash
     ./mvnw clean install
     ```
