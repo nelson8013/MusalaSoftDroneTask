@@ -39,78 +39,78 @@ Retrieve information about a specific drone.
 
 - **Endpoint:** `GET /drone/{droneId}`
 - **Parameters:**
-    - `droneId` (Long) - ID of the drone.
+  - `droneId` (Long) - ID of the drone.
 - **Response:**
-    - Status: 200 OK
-    - Body: Drone details.
+  - Status: 200 OK
+  - Body: Drone details.
 
 ### Get All Drones
 Retrieve information about all drones.
 
 - **Endpoint:** `GET /drones`
 - **Response:**
-    - Status: 200 OK
-    - Body: List of drones.
+  - Status: 200 OK
+  - Body: List of drones.
 
 ### Register Drone
 Register a new drone.
 
 - **Endpoint:** `POST /register-drone`
 - **Request Body:**
-    - `DroneRequest` - Details of the drone.
+  - `DroneRequest` - Details of the drone.
 - **Response:**
-    - Status: 201 Created
-    - Body: Details of the registered drone.
+  - Status: 201 Created
+  - Body: Details of the registered drone.
 
 ### Load Medication
 Load a single medication into a drone.
 
 - **Endpoint:** `POST /load-medication/{droneId}`
 - **Parameters:**
-    - `droneId` (Long) - ID of the drone.
+  - `droneId` (Long) - ID of the drone.
 - **Request Body:**
-    - `Medication` - Details of the medication.
+  - `Medication` - Details of the medication.
 - **Response:**
-    - Status: 204 No Content
+  - Status: 204 No Content
 
 ### Load Multiple Medications
 Load multiple medications into a drone.
 
 - **Endpoint:** `POST /load-medications/{droneId}`
 - **Parameters:**
-    - `droneId` (Long) - ID of the drone.
+  - `droneId` (Long) - ID of the drone.
 - **Request Body:**
-    - List of `Medication` - Details of the medications.
+  - List of `Medication` - Details of the medications.
 - **Response:**
-    - Status: 204 No Content
+  - Status: 204 No Content
 
 ### Get Available Drones for Loading
 Retrieve a list of available drones for loading.
 
 - **Endpoint:** `GET /get-available-drones-for-loading`
 - **Response:**
-    - Status: 200 OK
-    - Body: List of available drones.
+  - Status: 200 OK
+  - Body: List of available drones.
 
 ### Get Battery Level
 Retrieve the battery level of a drone.
 
 - **Endpoint:** `GET /get-battery-level/{droneId}`
 - **Parameters:**
-    - `droneId` (Long) - ID of the drone.
+  - `droneId` (Long) - ID of the drone.
 - **Response:**
-    - Status: 200 OK
-    - Body: Battery level of the drone.
+  - Status: 200 OK
+  - Body: Battery level of the drone.
 
 ### Get Loaded Medication from Drone
 Retrieve a list of medications loaded into a drone.
 
 - **Endpoint:** `GET /get-loaded-medication-from-drone/{droneId}`
 - **Parameters:**
-    - `droneId` (Long) - ID of the drone.
+  - `droneId` (Long) - ID of the drone.
 - **Response:**
-    - Status: 200 OK
-    - Body: List of loaded medications.
+  - Status: 200 OK
+  - Body: List of loaded medications.
 
 ## Data Transfer Objects
 
