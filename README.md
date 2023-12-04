@@ -45,7 +45,15 @@ Details for registering a new drone.
 - `weightLimit` (Double) - Weight limit of the drone.
 - `batteryCapacity` (Integer) - Battery capacity of the drone.
 - `state` (DroneState) - Current state of the drone.
-  
+  `
+   - {
+   -   "serialNumber" : "srn7689",
+   -   "model" : "Heavyweight",
+   -   "weightLimit" : 300.0,
+   -   "batteryCapacity" : 100,
+   -   "state" : "IDLE"
+   - }
+  `  
 
 ### Medication Request
 Details for creating a new medication.
@@ -146,7 +154,9 @@ Retrieve a list of medications loaded into a drone.
 
 ### POSTMAN SCREENS
 - Get All Drones
-  ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/bcc26b00-7374-40a2-a0fc-5e7380d82d87)
+  ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/044ec4e0-044f-473d-ad6b-0ecc3eb18e10)
 
+- Get A Single Drone
+![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/db2cfe4d-ddfc-41f5-af1c-f83046900546)
 
 
