@@ -1,30 +1,31 @@
     package com.musalasoft.app.Services;
 
-    import com.musalasoft.app.Exceptions.BatteryExceptions.BatteryLevelException;
-    import com.musalasoft.app.Exceptions.DroneExceptions.DroneNotFoundException;
-    import com.musalasoft.app.Exceptions.DroneExceptions.DroneStateException;
-    import com.musalasoft.app.Exceptions.SerialNumberException.SerialNumberLimitExceededException;
-    import com.musalasoft.app.Exceptions.WeightExceptions.WeightLimitExceededException;
-    import com.musalasoft.app.Interfaces.DroneServiceInterface;
-    import com.musalasoft.app.Models.Drone;
-    import com.musalasoft.app.Models.DroneState;
-    import com.musalasoft.app.Models.Medication;
-    import com.musalasoft.app.Repositories.DroneRepository;
-    import jakarta.annotation.PostConstruct;
-    import lombok.RequiredArgsConstructor;
-    import org.springframework.beans.factory.annotation.Autowired;
-    import org.springframework.scheduling.annotation.Scheduled;
-    import org.springframework.stereotype.Service;
-    import org.springframework.transaction.annotation.Transactional;
-    import org.slf4j.Logger;
-    import org.slf4j.LoggerFactory;
+    import static com.musalasoft.app.Utils.RequirementValidation.*;
 
-    import java.util.ArrayList;
-    import java.util.Arrays;
-    import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 
-    import static com.musalasoft.app.Utils.RequirementValidation.isDroneSerialNumberCharsLessThanOneHundred;
-    import static com.musalasoft.app.Utils.RequirementValidation.isDroneStateValid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.musalasoft.app.Exceptions.BatteryExceptions.BatteryLevelException;
+import com.musalasoft.app.Exceptions.DroneExceptions.DroneNotFoundException;
+import com.musalasoft.app.Exceptions.DroneExceptions.DroneStateException;
+import com.musalasoft.app.Exceptions.SerialNumberException.SerialNumberLimitExceededException;
+import com.musalasoft.app.Exceptions.WeightExceptions.WeightLimitExceededException;
+import com.musalasoft.app.Interfaces.DroneServiceInterface;
+import com.musalasoft.app.Models.Drone;
+import com.musalasoft.app.Models.DroneState;
+import com.musalasoft.app.Models.Medication;
+import com.musalasoft.app.Repositories.DroneRepository;
+
+import jakarta.annotation.PostConstruct;
 
 
     @Service
@@ -55,9 +56,14 @@
         }
 
 
-        public Drone getDrone(Long droneId){
-            Drone drone = droneRepository.findById(droneId).orElseThrow(() -> new DroneNotFoundException("Drone with id: " + droneId + " not found."));
-            return drone;
+        public Drone getDrone(Long droneId) {
+            Optional<Drone> optionalDrone = droneRepository.findById(droneId);
+        
+            if (optionalDrone.isPresent()) {
+                return optionalDrone.get();
+            } else {
+                throw new DroneNotFoundException("Drone with id: " + droneId + " not found.");
+            }
         }
 
         @Override

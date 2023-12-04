@@ -5,6 +5,8 @@ import com.musalasoft.app.Exceptions.MedicationExceptions.CodeCaseInvalidExcepti
 import com.musalasoft.app.Exceptions.MedicationExceptions.NameCaseInvalidException;
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 import static com.musalasoft.app.Utils.RequirementValidation.isCodeValid;
 import static com.musalasoft.app.Utils.RequirementValidation.isNameValid;
 
@@ -85,5 +87,21 @@ public class Medication {
         return this.image;
     }
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Medication that = (Medication) o;
+        return Double.compare(that.weight, weight) == 0 &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(code, that.code) &&
+                Objects.equals(image, that.image);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, code, weight, image);
+    }
 
 }
