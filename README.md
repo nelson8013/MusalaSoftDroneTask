@@ -1,7 +1,9 @@
 # Drone Medication Delivery Service
 
 ## PREREQUISITES
-- Ensure MySQL is running locally on port 3306.
+- You'll need an API client like Postman or Thnder client.
+- The project is to be run locally.
+
 
 ## Build Instructions
 1. Clone the repository.
@@ -23,9 +25,11 @@
     ```
 
 ## API Endpoints
-- Here's the documentation for the endpoints.
+- Use Postman to access the endpoints
+- BASE URL: `HTTP://127.0.0.1:1989/api/v1`
 
-## Drone Controller
+
+## Drone Controller Documentation
 
 ### Get Drone
 Retrieve information about a specific drone.
