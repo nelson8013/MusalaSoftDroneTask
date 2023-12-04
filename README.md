@@ -34,6 +34,30 @@
 
 ## Drone Controller Documentation
 
+
+## Data Transfer Objects
+
+### Drone Request
+Details for registering a new drone.
+
+- `serialNumber` (String) - Serial number of the drone.
+- `model` (String) - Model of the drone.
+- `weightLimit` (Double) - Weight limit of the drone.
+- `batteryCapacity` (Integer) - Battery capacity of the drone.
+- `state` (DroneState) - Current state of the drone.
+  
+
+### Medication Request
+Details for creating a new medication.
+
+- `name` (String) - Name of the medication.
+- `code` (String) - Code of the medication.
+- `weight` (Double) - Weight of the medication.
+- `image` (String) - Image URL of the medication.
+
+
+
+
 ### Get Drone
 Retrieve information about a specific drone.
 
@@ -112,24 +136,6 @@ Retrieve a list of medications loaded into a drone.
   - Status: 200 OK
   - Body: List of loaded medications.
 
-## Data Transfer Objects
-
-### Drone Request
-Details for registering a new drone.
-
-- `serialNumber` (String) - Serial number of the drone.
-- `model` (String) - Model of the drone.
-- `weightLimit` (Double) - Weight limit of the drone.
-- `batteryCapacity` (Integer) - Battery capacity of the drone.
-- `state` (DroneState) - Current state of the drone.
-
-### Medication Request
-Details for creating a new medication.
-
-- `name` (String) - Name of the medication.
-- `code` (String) - Code of the medication.
-- `weight` (Double) - Weight of the medication.
-- `image` (String) - Image URL of the medication.
 
 
 ### SIDE NOTE
