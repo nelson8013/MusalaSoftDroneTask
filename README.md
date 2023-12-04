@@ -123,8 +123,8 @@ Load multiple medications into a drone.
 - **Request Body:**
   - List of `Medication` - Details of the medications.
     `
-           - [
-           -     {
+       -[
+      -   {
            -        "name" : "Quinine",
            -        "code" : "SPT68991",
            -        "weight" : 12.0,
