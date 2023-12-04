@@ -45,15 +45,7 @@ Details for registering a new drone.
 - `weightLimit` (Double) - Weight limit of the drone.
 - `batteryCapacity` (Integer) - Battery capacity of the drone.
 - `state` (DroneState) - Current state of the drone.
-  `
-   - {
-   -   "serialNumber" : "srn7689",
-   -   "model" : "Heavyweight",
-   -   "weightLimit" : 300.0,
-   -   "batteryCapacity" : 100,
-   -   "state" : "IDLE"
-   - }
-  `  
+  
 
 ### Medication Request
 Details for creating a new medication.
@@ -90,6 +82,15 @@ Register a new drone.
 - **Endpoint:** `POST /register-drone`
 - **Request Body:**
   - `DroneRequest` - Details of the drone.
+    `
+   - {
+   -   "serialNumber" : "srn7689",
+   -   "model" : "Heavyweight",
+   -   "weightLimit" : 300.0,
+   -   "batteryCapacity" : 100,
+   -   "state" : "IDLE"
+   - }
+  `  
 - **Response:**
   - Status: 201 Created
   - Body: Details of the registered drone.
