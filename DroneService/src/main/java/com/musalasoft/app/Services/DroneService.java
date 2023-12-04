@@ -32,7 +32,6 @@ import jakarta.annotation.PostConstruct;
 
     @Service
     @Transactional
-//    @RequiredArgsConstructor
     public class DroneService implements DroneServiceInterface {
 
         private final DroneRepository droneRepository;

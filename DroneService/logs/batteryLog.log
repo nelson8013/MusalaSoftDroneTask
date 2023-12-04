@@ -1,0 +1,16 @@
+21:44:46.787 [main] INFO  c.m.app.Services.DroneService - Initialized default drones.
+21:44:47.544 [scheduling-1] INFO  c.m.app.Services.DroneService - DRONE BATTERY CHECK AT:::: 2023/12/04 21:44
+21:44:47.544 [scheduling-1] INFO  c.m.app.Services.DroneService - Battery Event for Drone with serial number - 7823Uhjdo00-00, capacity - 100 %
+21:44:47.545 [scheduling-1] INFO  c.m.app.Services.DroneService - Battery Event for Drone with serial number - 7823Uhjdo00-01, capacity - 100 %
+21:45:47.521 [scheduling-1] INFO  c.m.app.Services.DroneService - DRONE BATTERY CHECK AT:::: 2023/12/04 21:45
+21:45:47.521 [scheduling-1] INFO  c.m.app.Services.DroneService - Battery Event for Drone with serial number - 7823Uhjdo00-00, capacity - 100 %
+21:45:47.522 [scheduling-1] INFO  c.m.app.Services.DroneService - Battery Event for Drone with serial number - 7823Uhjdo00-01, capacity - 100 %
+21:46:47.516 [scheduling-1] INFO  c.m.app.Services.DroneService - DRONE BATTERY CHECK AT:::: 2023/12/04 21:46
+21:46:47.516 [scheduling-1] INFO  c.m.app.Services.DroneService - Battery Event for Drone with serial number - 7823Uhjdo00-00, capacity - 100 %
+21:46:47.516 [scheduling-1] INFO  c.m.app.Services.DroneService - Battery Event for Drone with serial number - 7823Uhjdo00-01, capacity - 100 %
+21:47:47.772 [scheduling-1] INFO  c.m.app.Services.DroneService - DRONE BATTERY CHECK AT:::: 2023/12/04 21:47
+21:47:47.775 [scheduling-1] INFO  c.m.app.Services.DroneService - Battery Event for Drone with serial number - 7823Uhjdo00-00, capacity - 100 %
+21:47:47.775 [scheduling-1] INFO  c.m.app.Services.DroneService - Battery Event for Drone with serial number - 7823Uhjdo00-01, capacity - 100 %
+21:48:47.771 [scheduling-1] INFO  c.m.app.Services.DroneService - DRONE BATTERY CHECK AT:::: 2023/12/04 21:48
+21:48:47.782 [scheduling-1] INFO  c.m.app.Services.DroneService - Battery Event for Drone with serial number - 7823Uhjdo00-00, capacity - 100 %
+21:48:47.783 [scheduling-1] INFO  c.m.app.Services.DroneService - Battery Event for Drone with serial number - 7823Uhjdo00-01, capacity - 100 %
