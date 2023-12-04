@@ -90,3 +90,11 @@
 22:29:57.486 [scheduling-1] INFO  c.m.app.Services.DroneService - DRONE BATTERY CHECK AT:::: 2023/12/04 22:29
 22:29:57.486 [scheduling-1] INFO  c.m.app.Services.DroneService - Battery Event for Drone with serial number - 7823Uhjdo00-00, capacity - 100 %
 22:29:57.486 [scheduling-1] INFO  c.m.app.Services.DroneService - Battery Event for Drone with serial number - 7823Uhjdo00-01, capacity - 100 %
+22:53:54.351 [main] INFO  c.m.app.Services.DroneService - Initialized default drones.
+22:53:54.554 [main] INFO  c.m.app.Services.DroneService - Initialized default drones.
+22:53:54.568 [main] INFO  c.m.app.Services.DroneService - Initialized default drones.
+22:53:54.605 [main] INFO  c.m.app.Services.DroneService - Initialized default drones.
+22:53:54.617 [main] INFO  c.m.app.Services.DroneService - Initialized default drones.
+22:53:54.630 [main] INFO  c.m.app.Services.DroneService - Initialized default drones.
+22:53:54.637 [main] INFO  c.m.app.Services.DroneService - Initialized default drones.
+22:53:54.643 [main] INFO  c.m.app.Services.DroneService - Initialized default drones.
