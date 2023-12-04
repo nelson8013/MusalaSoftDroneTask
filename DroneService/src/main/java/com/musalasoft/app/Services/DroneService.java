@@ -2,7 +2,9 @@
 
     import static com.musalasoft.app.Utils.RequirementValidation.*;
 
-import java.util.ArrayList;
+    import java.time.LocalDateTime;
+    import java.time.format.DateTimeFormatter;
+    import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -94,18 +96,13 @@ import jakarta.annotation.PostConstruct;
         }
 
         @Override
-        @Scheduled(fixedRate = 3600000)
+        @Scheduled(fixedRate = 60000)
         public void checkAllDronesBatteryLevelsAndLog(){
             List<Drone> drones = droneRepository.findAll();
-
+            LOGGER.info("DRONE BATTERY CHECK AT:::: " + dateFormat());
             for (Drone drone : drones) {
                 Long droneId = drone.getId();
-
-                if (drone.getBatteryCapacity() < 25) {
-                    droneBatteryLevelLog(droneId, "Battery level below 25%");
-                }
-
-                droneBatteryLevelLog(droneId, "Battery level...");
+                LOGGER.info("Battery Event for Drone with serial number - {}, capacity - {} %", drone.getSerialNumber(), drone.getBatteryCapacity());
             }
         }
 
@@ -156,11 +153,6 @@ import jakarta.annotation.PostConstruct;
         }
 
 
-
-        public void droneBatteryLevelLog(Long id, String message){
-            LOGGER.info("Event for Drone ID {}: {}", id, message);
-        }
-
         @Override
         public Integer getBatteryLevel(Long droneId) {
             return droneRepository.findDroneBatteryCapacityById(droneId);
@@ -169,6 +161,11 @@ import jakarta.annotation.PostConstruct;
         public List<Medication> getLoadedMedications(Long droneId) {
             Drone drone = getDrone(droneId);
             return new ArrayList<>(drone.getLoadedMedications());
+        }
+
+        private  String dateFormat(){
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu/MM/dd HH:mm");
+            return formatter.format(LocalDateTime.now());
         }
 
 

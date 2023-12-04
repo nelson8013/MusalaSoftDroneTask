@@ -28,7 +28,6 @@ public interface DroneServiceInterface {
 
     void checkAllDronesBatteryLevelsAndLog();
 
-    void droneBatteryLevelLog(Long id, String message);
 
     Integer getBatteryLevel(Long droneId);
 
