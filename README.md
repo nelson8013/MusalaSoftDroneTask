@@ -1,21 +1,29 @@
 # Drone Medication Delivery Service
 
 ## PREREQUISITES
-- You should have MySQL running locally on port 3306
+- Ensure MySQL is running locally on port 3306.
 
 ## Build Instructions
-- Clone the repository
-- Run the schema (drone-service.sql) in the root directory.
-- Navigate to the project directory
-- Run `./mvnw clean install` to build the project
-
+1. Clone the repository.
+2. Run the schema (drone-service.sql) script located in the project root directory:
+3. Navigate to the project directory.
+4. Run the following command to build the project:
+    ```bash
+    ./mvnw clean install
+    ```
 ## Run Instructions
-- Make sure MySQL is running
-- Update database configuration in `application.properties`
-- Run `./mvnw spring-boot:run` to start the application
+1. Make sure MySQL is running.
+2. Update the database configuration in `application.properties`, especially properties related to database connection.
+3. Run the following command to start the application:
+    ```bash
+    ./mvnw spring-boot:run
+    ```
 
 ## Test Instructions
-- Run `./mvnw test` to execute JUnit tests
+- Run the following command to execute JUnit tests:
+    ```bash
+    ./mvnw test
+    ```
 
 ## API Endpoints
-- Refer to `DroneController.java` for available endpoints and their usages
+- Refer to `DroneController.java` for available endpoints and their usages.
