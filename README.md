@@ -57,13 +57,7 @@ Register a new drone.
 
 - **Endpoint:** `POST /register-drone`
 - **Request Body:**
-  - `{
-        "serialNumber" : "7823Uhjdo0089",
-        "model" : "Heavyweight",
-        "weightLimit" : 500.0,
-        "batteryCapacity" : 30,
-        "state" : "IDLE"
-     }` - Details of the drone.
+  - `DroneRequest` - Details of the drone.
 - **Response:**
   - Status: 201 Created
   - Body: Details of the registered drone.
