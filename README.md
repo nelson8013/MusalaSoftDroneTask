@@ -144,3 +144,9 @@ Retrieve a list of medications loaded into a drone.
 ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/aea2b6b0-c9e5-407c-bd5a-b0008e0ba82c)
 - The application is ready
 
+### POSTMAN SCREENS
+- Get All Drones
+  ![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/bcc26b00-7374-40a2-a0fc-5e7380d82d87)
+
+
+
