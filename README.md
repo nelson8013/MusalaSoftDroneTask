@@ -5,7 +5,7 @@
 
 ## Build Instructions
 - Clone the repository
-- Run the schema(drone-service.sql) in the root directory.
+- Run the schema (drone-service.sql) in the root directory.
 - Navigate to the project directory
 - Run `./mvnw clean install` to build the project
 
