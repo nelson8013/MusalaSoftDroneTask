@@ -127,3 +127,11 @@ Details for creating a new medication.
 - `code` (String) - Code of the medication.
 - `weight` (Double) - Weight of the medication.
 - `image` (String) - Image URL of the medication.
+
+
+### SIDE NOTE
+- Once you start or run the application and see this:
+
+![image](https://github.com/nelson8013/MusalaSoftDroneTask/assets/12644704/aea2b6b0-c9e5-407c-bd5a-b0008e0ba82c)
+- The application is ready
+
