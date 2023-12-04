@@ -1,7 +1,7 @@
 # Drone Medication Delivery Service
 
 ## PREREQUISITES
-- You'll need an API client like Postman or Thnder client.
+- You'll need an API client like Postman or Thunder client.
 - The project is to be run locally.
 
 
@@ -26,7 +26,7 @@
 
 ## API Endpoints
 - Use Postman to access the endpoints
-- BASE URL: `HTTP://127.0.0.1:1989/api/v1`
+- BASE URL: `http://127.0.0.1:1989/api/v1`
 
 
 ## Drone Controller Documentation
