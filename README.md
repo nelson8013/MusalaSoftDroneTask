@@ -1,5 +1,7 @@
 # Drone Medication Delivery Service
 
+https://uavsystemsinternational.com/cdn/shop/products/AureliaX8MAXFrontView_x314@2x.jpg?v=1669653288
+
 ## PREREQUISITES
 - You'll need an API client like Postman or Thunder client.
 - The project is to be run locally.
