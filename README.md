@@ -5,15 +5,10 @@
 
 ## Build Instructions
 1. Clone the repository.
-2. Navigate to the project directory.
-3. Run the following command to build the project:
-    ```bash
-    ./mvnw clean install
-    ```
+2. Navigate to the project directory [DroneService].
+
 ## Run Instructions
-1. Make sure MySQL is running.
-2. Update the database configuration in `application.properties`, especially properties related to database connection.
-3. Run the following command to start the application:
+1. Run the following command to start the application:
     ```bash 
     ./mvnw spring-boot:run
     ```
