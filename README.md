@@ -6,6 +6,9 @@
 ## Build Instructions
 1. Clone the repository.
 2. Navigate to the project directory [DroneService].
+   ```bash 
+    ./mvnw clean install
+    ```
 
 ## Run Instructions
 1. Run the following command to start the application:
