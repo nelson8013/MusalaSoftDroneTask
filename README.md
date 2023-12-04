@@ -1,5 +1,9 @@
 # Drone Medication Delivery Service
 
+## PREREQUISITES
+- You should have MySQL running locally on port 3306
+- Run the schema(drone-service.sql) in the root directory.
+
 ## Build Instructions
 - Clone the repository
 - Navigate to the project directory
